@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="styles/lightbox.min.css" />
     <link rel="stylesheet" href="styles/utilities.css" />
     <link rel="stylesheet" href="styles/header.css" />
+    <link
+      rel="stylesheet"
+      href="styles/mobile.css"
+      media="only screen and (max-width: 768px)"
+    />
   </head>
   <body id="home-page-body">
     <!-- header -->
     <header class="header">
       <!-- Desktop navbar -->
-      <div id="navbar" class="navbar top">
+      <div id="navbar" class="navbar top hidden-style-ops">
         <h1 class="logo">
           <i class="fas fa-laptop"></i> Yarden Tamir
           <span class="text-primary">Portfolio</span>
@@ -35,7 +40,7 @@
       </div>
 
       <!--Nav mobile-->
-      <!-- <nav role="navigation" id="nav-mobile" class="hidden-style">
+      <nav role="navigation" id="nav-mobile" class="hidden-style">
         <div id="menuToggle">
           <input type="checkbox" />
           <span></span>
@@ -48,7 +53,7 @@
             <li><a href="#contact">Contact me</a></li>
           </ul>
         </div>
-      </nav> -->
+      </nav>
 
       <!-- header content -->
       <div class="content">
