@@ -17,8 +17,8 @@
   </head>
   <body id="home-page-body">
     <!-- header -->
-    <header class="hero">
-      <!-- navbar -->
+    <header class="header">
+      <!-- Desktop navbar -->
       <div id="navbar" class="navbar top">
         <h1 class="logo">
           <i class="fas fa-laptop"></i> Yarden Tamir
@@ -26,7 +26,7 @@
         </h1>
         <nav>
           <ul id="nav-list">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="current">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#proects">Projects</a></li>
             <li><a href="#contact" class="btn">Contact me</a></li>
@@ -34,20 +34,37 @@
         </nav>
       </div>
 
+      <!--Nav mobile-->
+      <!-- <nav role="navigation" id="nav-mobile" class="hidden-style">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#proects">Projects</a></li>
+            <li><a href="#contact">Contact me</a></li>
+          </ul>
+        </div>
+      </nav> -->
+
       <!-- header content -->
       <div class="content">
         <div class="flex-container">
-          <div class="imgWrapper flex-item">
+          <div class="imgWrapper">
             <img src="images\home\YardenTamir.jpg" alt="Yarden's Picture" />
           </div>
-          <h2 class="flex-item">
-            Hello my name is Yarden,<br />
-            I'm a Full Stack developer
-          </h2>
+          <h1 class="flex-item">
+            Hi! I'm Yarden,<br />
+            A Full Stack developer
+          </h1>
         </div>
         <div>
-          <p>
-            I love programming and develop beautiful websites, <br />
+          <p class="heading-p">
+            I <i class="fas fa-heart heart"></i> programming and develop
+            beautiful websites, <br />
             I like to think of modern ways to design a web that would be
             responsive to any type of platform.
           </p>
@@ -62,7 +79,7 @@
       let scrolled = false;
 
       window.onscroll = function () {
-        if (window.pageYOffset > 100) {
+        if (window.pageYOffset > 80) {
           navbar.classList.remove("top");
           navbar.classList.add("white-txt");
           navList.classList.add("white-txt");
