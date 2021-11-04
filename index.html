@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yarden Tamir | FullStack Developer</title>
+    <!-- scripts -->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-a11y="true"
+    ></script>
+    <!-- links -->
+    <link rel="stylesheet" href="styles/lightbox.min.css" />
+    <link rel="stylesheet" href="styles/utilities.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+  </head>
+  <body id="home-page-body">
+    <!-- header -->
+    <header class="hero">
+      <!-- navbar -->
+      <div id="navbar" class="navbar top">
+        <h1 class="logo">
+          <i class="fas fa-laptop"></i> Yarden Tamir
+          <span class="text-primary">Portfolio</span>
+        </h1>
+        <nav>
+          <ul id="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#proects">Projects</a></li>
+            <li><a href="#contact" class="btn">Contact me</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- header content -->
+      <div class="content">
+        <div class="flex-container">
+          <div class="imgWrapper flex-item">
+            <img src="images\home\YardenTamir.jpg" alt="Yarden's Picture" />
+          </div>
+          <h2 class="flex-item">
+            Hello my name is Yarden,<br />
+            I'm a Full Stack developer
+          </h2>
+        </div>
+        <div>
+          <p>
+            I love programming and develop beautiful websites, <br />
+            I like to think of modern ways to design a web that would be
+            responsive to any type of platform.
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="section2-container"></div>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+      const navbar = document.getElementById("navbar");
+      const navList = document.querySelector("li a");
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove("top");
+          navbar.classList.add("white-txt");
+          navList.classList.add("white-txt");
+          if (!scrolled) {
+            navbar.style.transform = "translateY(-70px)";
+          }
+          setTimeout(function () {
+            navbar.style.transform = "translateY(0)";
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add("top");
+          navbar.classList.remove("white-txt");
+          navList.classList.remove("white-txt");
+          scrolled = false;
+        }
+      };
+    </script>
+  </body>
+</html>
