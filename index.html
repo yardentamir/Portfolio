@@ -10,10 +10,12 @@
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
       data-auto-a11y="true"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- links -->
     <link rel="stylesheet" href="styles/lightbox.min.css" />
     <link rel="stylesheet" href="styles/utilities.css" />
     <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/portfolio.css" />
     <link
       rel="stylesheet"
       href="styles/mobile.css"
@@ -68,26 +70,66 @@
         </div>
         <div>
           <p class="heading-p">
-            I <i class="fas fa-heart heart"></i> programming and develop
-            beautiful websites, <br />
+            I <i class="fas fa-heart heart" alt="love"></i> programming and
+            develop beautiful websites, <br />
             I like to think of modern ways to design a web that would be
             responsive to any type of platform.
           </p>
         </div>
       </div>
     </header>
-    <div class="section2-container"></div>
+    <div class="section2-container">
+      <h2>My projects</h2>
+      <div class="parent">
+        <div class="div1">
+          <section class="inner-section1 flex-container">
+            <div class="img-container">
+              <img
+                src="../images/home/פוסטר - הסיפור שלי.jpg"
+                alt="'my story' project"
+              />
+            </div>
+            <div>
+              <h3>'my story' project</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam asperiores laudantium repellat odio animi corporis, ex
+                perspiciatis sit assumenda! Reprehenderit.
+              </p>
+            </div>
+          </section>
+        </div>
+        <div class="div2">
+          <section class="inner-section2 flex-container">
+            <div>
+              <h3>'my story' project</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam asperiores laudantium repellat odio animi corporis, ex
+                perspiciatis sit assumenda! Reprehenderit.
+              </p>
+            </div>
+            <div class="img-container">
+              <img
+                src="../images/home/teddybearMachine.jpg"
+                alt="'my story' project"
+              />
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
     <script src="js/lightbox.min.js"></script>
     <script>
       const navbar = document.getElementById("navbar");
-      const navList = document.querySelector("li a");
+      // const navList = document.getElementById("nav-list");
       let scrolled = false;
 
       window.onscroll = function () {
         if (window.pageYOffset > 80) {
           navbar.classList.remove("top");
-          navbar.classList.add("white-txt");
-          navList.classList.add("white-txt");
+          // navbar.classList.add("white-txt");
+          // navList.classList.add("white-txt");
           if (!scrolled) {
             navbar.style.transform = "translateY(-70px)";
           }
@@ -98,7 +140,7 @@
         } else {
           navbar.classList.add("top");
           navbar.classList.remove("white-txt");
-          navList.classList.remove("white-txt");
+          // navList.classList.remove("white-txt");
           scrolled = false;
         }
       };
