@@ -12,14 +12,14 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- links -->
-    <link rel="stylesheet" href="styles/lightbox.min.css" />
     <link rel="stylesheet" href="styles/utilities.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/portfolio.css" />
+    <link rel="stylesheet" href="styles/footer.css">
     <link
       rel="stylesheet"
       href="styles/mobile.css"
-      media="only screen and (max-width: 768px)"
+      media="only screen and (max-width: 764px)"
     />
   </head>
   <body id="home-page-body">
@@ -36,7 +36,7 @@
             <li><a href="#home" class="current">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#proects">Projects</a></li>
-            <li><a href="#contact" class="btn">Contact me</a></li>
+            <li><a id="con-btn" href="#contact" class="btn">Contact me</a></li>
           </ul>
         </nav>
       </div>
@@ -73,7 +73,7 @@
             I <i class="fas fa-heart heart" alt="love"></i> programming and
             develop beautiful websites, <br />
             I like to think of modern ways to design a web that would be
-            responsive to any type of platform.
+            responsive to any type of platform. 
           </p>
         </div>
       </div>
@@ -90,24 +90,54 @@
               />
             </div>
             <div>
-              <h3>'my story' project</h3>
+              <h3>My Story - Sharing Site</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam asperiores laudantium repellat odio animi corporis, ex
-                perspiciatis sit assumenda! Reprehenderit.
-              </p>
+                perspiciatis sit assumenda! Reprehenderit. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Earum, aliquam. Lorem ipsum dolor sit 
+                amet consectetur, adipisicing elit. Iure architecto repellat impedit dolore,
+                 sapiente ipsum quo. Porro incidunt doloribus eaque?
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolor!</p>
+              <div>
+                <input
+                  type="button"
+                  value="Read More"
+                  class="btn secondary-btn"
+                />
+                <input
+                  type="button"
+                  value="Visit Site"
+                  class="btn primary-btn"
+                />
+              </div>
             </div>
           </section>
         </div>
         <div class="div2">
           <section class="inner-section2 flex-container">
             <div>
-              <h3>'my story' project</h3>
+              <h3>Teddy Bear Machine - Game generator</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam asperiores laudantium repellat odio animi corporis, ex
-                perspiciatis sit assumenda! Reprehenderit.
+                perspiciatis sit assumenda! Reprehenderit. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Illo, maxime reiciendis
+                tempora porro eos quidem dolores repellendus saepe nihil
+                deserunt?
               </p>
+              <div>
+                <input
+                  type="button"
+                  value="Read More"
+                  class="btn secondary-btn"
+                />
+                <input
+                  type="button"
+                  value="Visit Site"
+                  class="btn primary-btn"
+                />
+              </div>
             </div>
             <div class="img-container">
               <img
@@ -119,7 +149,56 @@
         </div>
       </div>
     </div>
-    <script src="js/lightbox.min.js"></script>
+    <div class="section3-container">
+      <div class="inner-section3">
+        <form action="/action.php">
+          <label for="fname">First name:</label><br />
+          <input type="text" id="fname" value="Mike" /><br /><br />
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="lname" value="Walker" /><br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+        <div class="wrapper">
+          <a href="https://www.facebook.com/yarden.tamir1"
+          target="_blank">
+          <div class="icon facebook">
+            <div class="tooltip">Facebook</div>
+              <i class="fab fa-facebook-f"></i></span>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/tamiryarden/"
+              target="_blank">
+          <div class="icon instagram">
+            <div class="tooltip">Instagram</div>
+            <span> <i class="fab fa-instagram"></i></span>
+          </div>
+        </a>
+          <a
+              href="https://www.linkedin.com/in/yarden-tamir-a1a986197"
+              target="_blank">
+          <div class="icon linkedin">
+            <div class="tooltip">Linkedin</div>
+            <span>              
+              <i class="fab fa-linkedin"></i></span>
+          </div>
+        </a>
+        <a href="https://github.com/yardentamir"
+              target="_blank">
+          <div class="icon github">
+            <div class="tooltip">Github</div>
+            <span><i class="fab fa-github"></i></span>
+          </div>
+        </a>
+    </div>
+    <p>CopyRight &copy served by Yarden Tamir</p>
+  </footer>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <script>
       const navbar = document.getElementById("navbar");
       // const navList = document.getElementById("nav-list");
@@ -128,7 +207,7 @@
       window.onscroll = function () {
         if (window.pageYOffset > 80) {
           navbar.classList.remove("top");
-          // navbar.classList.add("white-txt");
+          navbar.classList.add("white-txt");
           // navList.classList.add("white-txt");
           if (!scrolled) {
             navbar.style.transform = "translateY(-70px)";
@@ -144,6 +223,21 @@
           scrolled = false;
         }
       };
+
+          // Smooth Scrolling
+    $('#con-btn').on('click', function(event) {
+        if (this.hash !== '') {
+          event.preventDefault();
+          // const hash = this.hash;
+          const contDiv = $(".section3-container");
+          $('html, body').animate(
+            {
+              scrollTop: $(contDiv).offset().top
+            },
+            800
+          );
+        }
+      });
     </script>
   </body>
 </html>

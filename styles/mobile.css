@@ -1,7 +1,40 @@
 .hidden-style {
-  display: block !important;
+  display: block;
 }
 
 .hidden-style-ops {
-  display: none !important;
+  display: none;
+}
+
+.flex-container {
+  display: inline-block;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
+.inner-section1,
+.inner-section2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.heading-p {
+  font-size: 16px;
+}
+
+.img-container {
+  height: auto;
+}
+
+.inner-section1 div:last-child,
+.inner-section2 div:first-child {
+  width: 100%;
 }
