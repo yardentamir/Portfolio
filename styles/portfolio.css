@@ -40,9 +40,9 @@
 
 .inner-section1,
 .inner-section2 {
-  position: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 10px;
 }
 
 .heading-p {
