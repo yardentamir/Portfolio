@@ -1,12 +1,17 @@
-.parent {
+.projects-parent-div {
   display: grid;
 }
 
-.div1 {
+.projects-sec1 {
   background: var(--section-bg);
   width: 100%;
   padding-bottom: 50px;
   height: auto;
+}
+
+.projects-sec2 {
+  background-color: white;
+  padding-bottom: 100px;
 }
 
 .inner-section1 {
@@ -15,12 +20,6 @@
   background-color: white;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
-
-.div2 {
-  background-color: white;
-  padding-bottom: 100px;
-}
-
 /* section 2 */
 
 .inner-section2 {
@@ -45,29 +44,13 @@
   border-radius: 10px;
 }
 
-.heading-p {
-  font-size: 22px;
-}
-
-/* section 3 */
-
-.section3-container {
-  background-color: var(--secondary-section-bg);
-  height: 80vh;
-}
-
-.inner-section3 {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  background-color: white;
-  padding: 3rem;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  transition: height 700ms ease-in linear;
-}
-.inner-section1 div:last-child,
-.inner-section2 div:first-child {
+.inner-section1 > div:last-child,
+.inner-section2 > div:first-child {
   width: 90%;
   padding: 0 20px;
   top: 0;
+}
+
+.heading-p {
+  font-size: 22px;
 }

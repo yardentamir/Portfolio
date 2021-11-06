@@ -34,13 +34,12 @@ h3 {
   font-size: 16px;
 }
 
-.img-container {
-  height: auto;
-}
-
-.inner-section1 div:last-child,
-.inner-section2 div:first-child {
+.inner-section1 > div:last-child,
+.inner-section2 > div:first-child {
   width: 100%;
 }
 
-/* form */
+.fadeInRight,
+.fadeInLeft {
+  animation: none;
+}
