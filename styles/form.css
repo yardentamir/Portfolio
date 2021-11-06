@@ -25,7 +25,7 @@
 /* form styling */
 
 form {
-  max-width: 600px;
+  max-width: 750px;
   text-align: center;
   margin: 20px auto;
 }
@@ -40,11 +40,11 @@ form textarea {
   border-radius: 8px;
   display: block;
   width: 100%;
-  margin-top: 1em;
   font-family: "YanoneKaffeesatz", "Righteous-Regular", sans-serif;
-  -moz-box-shadow: 0 1px 1px var(--social-icons-box-shadow);
-  -webkit-box-shadow: 0 1px 1px var(--social-icons-box-shadow);
-  box-shadow: 0 1px 1px var(--social-icons-box-shadow);
+  -moz-box-shadow: 0 0px 2px var(--form-inputs-hover);
+  -webkit-box-shadow: 0 0px 2px var(--form-inputs-hover);
+  box-shadow: 0 0px 2px var(--form-inputs-hover);
+  font-size: 16px;
   resize: none;
 }
 
@@ -60,7 +60,7 @@ form #input-submit {
   color: white;
   background: var(--green-bg-btn);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   transition: background-color 700ms ease-in-out;
 }
 
@@ -69,7 +69,7 @@ form #input-submit:hover {
 }
 
 form textarea {
-  height: 146px;
+  height: 206px;
 }
 
 .half {
@@ -107,6 +107,10 @@ form textarea {
   clear: both;
 }
 
-.green-txt {
-  color: var(--green-txt);
+/* form labels */
+
+form div {
+  text-align: left;
+  font-family: "YanoneKaffeesatz", "SuezOne-Regular", sans-serif;
+  padding: 2px 0;
 }

@@ -68,7 +68,7 @@ $("#con-btn").on("click", function (event) {
     const contDiv = $(".section3-container");
     $("html, body").animate(
       {
-        scrollTop: $(contDiv).offset().top,
+        scrollTop: $(contDiv).offset().top - 40,
       },
       800
     );
