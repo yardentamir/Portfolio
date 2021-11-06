@@ -114,3 +114,9 @@ form div {
   font-family: "YanoneKaffeesatz", "SuezOne-Regular", sans-serif;
   padding: 2px 0;
 }
+
+/* submit btn */
+
+input[type="submit"] {
+  margin-top: 0.6rem;
+}
