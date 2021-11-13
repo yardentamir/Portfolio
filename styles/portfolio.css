@@ -1,3 +1,11 @@
+/* section {0 - icons*/
+.all-icons {
+  height: 100%;
+}
+.all-icons > * {
+  margin: 0 10px;
+}
+/* section1 */
 .projects-parent-div {
   display: grid;
 }

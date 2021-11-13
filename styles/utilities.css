@@ -106,6 +106,7 @@ p {
 .flex-container {
   display: flex;
   padding: 1em;
+  justify-content: center;
 }
 
 .flex-item {

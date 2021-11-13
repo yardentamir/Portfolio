@@ -43,3 +43,7 @@ h3 {
 .fadeInLeft {
   animation: none;
 }
+
+.lang-container {
+  text-align: center;
+}
